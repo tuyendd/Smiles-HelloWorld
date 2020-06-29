@@ -1,0 +1,22 @@
+{
+    "name": "Smiles_HelloWorld",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Tuyen Do Dinh",
+            "email": "dodinhtuyen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Smiles\\HelloWorld\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

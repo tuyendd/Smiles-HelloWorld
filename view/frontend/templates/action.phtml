@@ -1,0 +1,40 @@
+<?php $record = $block->getEditRecord(); ?>
+<form action="<?php echo $block->getUrl('helloworld/index/save'); ?>" method="post" id="helloworld-form" enctype="multipart/form-data" novalidate="novalidate">
+<input id="helloworld_post_id" name="editRecordId" value="<?php echo isset($record['post_id'])?$record['post_id']:''; ?>" class=" input-text" type="hidden">
+<table cellspacing="0" class="form-list">
+	<colgroup class="label"></colgroup>
+	<colgroup class="value"></colgroup>
+	<colgroup class="scope-label"></colgroup>
+	<tbody>
+		<tr id="row_helloworld_name">
+			<td class="label"><label for="helloworld_name">Post Name</label></td>
+			<td class="value">
+				<input id="helloworld_name" name="name" value="<?php echo isset($record['name'])?$record['name']:''; ?>" class=" input-text" type="text">
+			</td>
+		</tr>
+		<tr id="row_helloworld_url_key">
+			<td class="label"><label for="helloworld_url_key">Post URL Key</label></td>
+			<td class="value">
+				<input id="helloworld_url_key" name="url_key" value="<?php echo isset($record['url_key'])?$record['url_key']:''; ?>" class=" input-text" type="text">
+			</td>
+		</tr>
+		<tr id="row_helloworld_post_content">
+			<td class="label"><label for="helloworld_post_content">Post Content</label></td>
+			<td class="value">
+				<input id="helloworld_post_content" name="post_content" value="<?php echo isset($record['post_content'])?$record['post_content']:''; ?>" class=" input-text" type="text">
+			</td>
+		</tr>
+		<tr id="row_helloworld_tags">
+			<td class="label"><label for="helloworld_tags">Post Tags</label></td>
+			<td class="value">
+				<input id="helloworld_tags" name="tags" value="<?php echo isset($record['tags'])?$record['tags']:''; ?>" class=" input-text" type="text">
+			</td>
+		</tr>
+		<tr id="row_helloworld_tags">
+			<td></td>
+			<td><input type="submit" value="Save" class="action primary" /></td>
+		</tr>
+	</tbody>
+</table>
+<center></center>
+</form>

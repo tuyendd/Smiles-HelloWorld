@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @var \Smiles\HelloWorld\Block\Display $block
+ */
+
+echo $block->sayHello();
+
+?>
+
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.post-id{width:2%} .post-name{width:30%}
+
+</style>
+<p><a class="action primary" href="<?php echo $block->getUrl('helloworld/index/insert'); ?>">Add Record</a></p><table>
+  <tr>
+    <th class="post-id">Id</th>
+    <th class="post-name">Name</th>
+    <th>Content</th>
+Å@Å@<th colspan="2">Action</th>	
+  </tr>
+    <?php
+        foreach ($block->getPostCollection() as $key=>$post){
+            echo '<tr>
+                    <td>'.$post->getPostId().'</td>
+                    <td>'.$post->getName().'</td>
+                    <td>'.$post->getPostContent().'</td>
+		    <td><a class="action primary" href="'. $block->getUrl('helloworld/index/edit').'id/'.$post->getPostId() . '">Edit</a></td>
+		    <td><a class="action primary" href="'. $block->getUrl('helloworld/index/delete').'?id='.$post->getPostId(). '">Delete</a>
+                  </tr>';
+        }
+    ?>
+</table>
