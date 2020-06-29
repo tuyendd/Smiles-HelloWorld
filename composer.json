@@ -1,5 +1,5 @@
 {
-    "name": "smiles",
+    "name": "smiles/module-helloworld",
     "description": "",
     "type": "magento2-module",
     "license": "proprietary",
